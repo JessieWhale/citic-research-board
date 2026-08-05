@@ -26,7 +26,7 @@ if ($LASTEXITCODE -ne 0) {
   Write-Error "Not a git repo: $PagesDir"
 }
 
-git add index.html .nojekyll
+git add index.html .nojekyll .github/workflows/deploy-pages.yml README.md
 $status = git status --porcelain
 if (-not $status) {
   Write-Host "No changes to publish (index.html already up to date)."

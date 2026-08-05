@@ -26,16 +26,19 @@ git push -u origin main
 
 若尚未登录 GitHub，按提示在浏览器完成登录即可。
 
-### 3. 打开 GitHub Pages
+### 3. 打开 GitHub Pages（选 GitHub Actions）
 
-1. 仓库页 → **Settings** → **Pages**  
-2. Build and deployment → Source 选 **Deploy from a branch**  
-3. Branch 选 `main`，文件夹选 `/ (root)` → Save  
-4. 约 1 分钟后出现访问地址，形如：
+新仓库通常只能选 **GitHub Actions**（不要纠结 Deploy from a branch）。
 
-`https://YOUR_USER.github.io/csc-research-board/`
+1. 确认本仓库已包含 `.github/workflows/deploy-pages.yml`，并已 `git push` 到 `main`  
+2. 仓库页 → **Settings** → **Pages**  
+3. Build and deployment → Source 选 **GitHub Actions**  
+4. 打开 **Actions** 页，等到 `Deploy GitHub Pages` 工作流跑成绿色  
+5. 再回到 Settings → Pages，会出现访问地址，形如：
 
-把这个链接发给同事即可（打开的是本目录下的 `index.html`）。
+`https://JessieWhale.github.io/citic-research-board/`
+
+把这个链接发给同事即可。
 
 ---
 
